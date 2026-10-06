@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computer Fix · Consultoría TI para empresas</title>
+  <meta name="description" content="Startup de tecnología especializada en consultoría TI para empresas: infraestructura, seguridad, soporte y sistemas de operación.">
+  <link rel="icon" href="img/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="sitio-cabecera">
+    <div class="barra">
+      <a class="logo" href="index.html">
+        <img src="img/logo.jpg" alt="">
+        <span class="logo-texto"><strong>COMPUTER</strong><b>FIX</b></span>
+      </a>
+      <div class="grupo-iconos">
+        <button type="button" class="btn-tema" aria-pressed="false">Modo oscuro</button>
+        <button type="button" class="btn-carrito" aria-expanded="false" aria-controls="carrito">
+          Carrito <span class="carrito-cuenta">0</span>
+        </button>
+        <button class="btn-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav id="menu-principal" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="solicitar.html">Solicitar</a></li>
+          <li><a href="seguimiento.html">Seguimiento</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <aside id="carrito" class="panel-carrito oculto" aria-label="Carrito de paquetes">
+    <h2>Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p class="total-carrito">Total: <span id="total-carrito">$0</span></p>
+    <button type="button" id="vaciar-carrito" class="boton secundario">Vaciar carrito</button>
+  </aside>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="envoltorio">
+        <div>
+          <h1 id="titulo-hero">Consultoría TI para empresas que no pueden parar el sistema.</h1>
+          <p>Computer Fix es una startup de tecnología. Acompañamos a compañías y a operaciones financieras a ordenar infraestructura, seguridad y los sistemas del día a día, con un caso que se puede seguir en línea.</p>
+          <div class="acciones">
+            <a class="boton" href="solicitar.html">Pedir una consultoría</a>
+            <a class="boton secundario" href="seguimiento.html">Ver el estado de un caso</a>
+          </div>
+        </div>
+        <div class="marco-hero" aria-hidden="true">
+          <div class="pantalla">
+            <p><span class="punto"></span><span class="punto"></span><span class="punto"></span></p>
+            <p><code>CF-1042</code> · Infraestructura</p>
+            <p>Banco Andino — En ejecución</p>
+            <p>Arquitectura en nube. Ventana de corte: sábado 22:00.</p>
+            <p><code>CF-1043</code> · Ciberseguridad</p>
+            <p>Clínica Norte — En análisis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-pasos">
+      <div class="envoltorio">
+        <h2 id="titulo-pasos">Cómo entra un caso</h2>
+        <p class="intro">No pedimos una cuenta. Se abre el caso, se asigna un código y el cliente ve en qué va sin estar llamando cada dos horas.</p>
+        <div class="rejilla tres">
+          <article class="tarjeta">
+            <span class="paso-num" aria-hidden="true">1</span>
+            <h3>Levantamiento</h3>
+            <p>Formulario o una llamada. Empresa, área (nube, seguridad, soporte) y qué está fallando o qué se quiere ordenar.</p>
+          </article>
+          <article class="tarjeta">
+            <span class="paso-num" aria-hidden="true">2</span>
+            <h3>Análisis</h3>
+            <p>Revisamos el entorno y armamos un plan. Si hay que comprar herramienta o ampliar alcance, se avisa antes.</p>
+          </article>
+          <article class="tarjeta">
+            <span class="paso-num" aria-hidden="true">3</span>
+            <h3>Ejecución y cierre</h3>
+            <p>El tablero cambia de estado. Cuando el caso está listo, queda el informe y la entrega con el cliente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-servicios" style="padding-top:0">
+      <div class="envoltorio">
+        <h2 id="titulo-servicios">En qué nos metemos</h2>
+        <div class="rejilla dos">
+          <article class="tarjeta">
+            <h3>Consultoría e infraestructura</h3>
+            <p>Diagnóstico de la operación TI, nube, redes y lo que hay que dejar documentado para que el área no dependa de una sola persona.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Seguridad y sistemas de operación</h3>
+            <p>Accesos, copias, conciliación y procesos que en empresas y fintech se hacen todavía a mano. Soporte cuando el incidente no puede esperar al lunes.</p>
+          </article>
+        </div>
+        <p><a href="servicios.html">Ver servicios</a></p>
+      </div>
+    </section>
+
+    <section class="franja" aria-labelledby="titulo-seguimiento">
+      <div class="envoltorio">
+        <h2 id="titulo-seguimiento">Seguimiento del caso, no un buzón</h2>
+        <p>Cada trabajo tiene un código tipo <strong>CF-1042</strong>. Con el celular de contacto se ve si está en análisis, en ejecución o listo para cierre.</p>
+        <p><a href="seguimiento.html">Ir al seguimiento</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sitio-pie">
+    <div class="envoltorio pie-grid">
+      <div>
+        <img class="logo-pie" src="img/logo.jpg" alt="">
+        <strong>Computer Fix</strong>
+        <p>Consultoría TI para empresas. Startup de tecnología con foco en operación, seguridad y sistemas.</p>
+      </div>
+      <div>
+        <strong>Contacto</strong>
+        <address>
+          Cra. 15 # 78-40, local 2<br>
+          Bogotá<br>
+          <a href="tel:+573006321934">300 632 1934</a><br>
+          <a href="mailto:computerfix.med@gmail.com">computerfix.med@gmail.com</a>
+        </address>
+      </div>
+      <div>
+        <strong>Sitio</strong>
+        <ul>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="solicitar.html">Solicitar</a></li>
+          <li><a href="seguimiento.html">Seguimiento</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="envoltorio copy">
+      <p>© <span id="anio">2026</span> Computer Fix. Proyecto académico de Desarrollo Web.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seguimiento de casos · Computer Fix</title>
+  <meta name="description" content="Consulte el estado de un caso con el código y el celular.">
+  <link rel="icon" href="img/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="sitio-cabecera">
+    <div class="barra">
+      <a class="logo" href="index.html">
+        <img src="img/logo.jpg" alt="">
+        <span class="logo-texto"><strong>COMPUTER</strong><b>FIX</b></span>
+      </a>
+      <div class="grupo-iconos">
+        <button type="button" class="btn-tema" aria-pressed="false">Modo oscuro</button>
+        <button type="button" class="btn-carrito" aria-expanded="false" aria-controls="carrito">
+          Carrito <span class="carrito-cuenta">0</span>
+        </button>
+        <button class="btn-menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav id="menu-principal" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="solicitar.html">Solicitar</a></li>
+          <li><a href="seguimiento.html">Seguimiento</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <aside id="carrito" class="panel-carrito oculto" aria-label="Carrito de paquetes">
+    <h2>Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p class="total-carrito">Total: <span id="total-carrito">$0</span></p>
+    <button type="button" id="vaciar-carrito" class="boton secundario">Vaciar carrito</button>
+  </aside>
+
+  <main id="contenido" class="seccion">
+    <div class="envoltorio dos-cols">
+      <section aria-labelledby="titulo-consulta">
+        <h1 id="titulo-consulta">Seguimiento del caso</h1>
+        <p class="intro">Use el código que salió al registrar la solicitud y el celular. Hay tres casos de ejemplo para probar la página.</p>
+
+        <aside class="aviso-caja">
+          <p>Prueba con <strong>CF-1042</strong> y el celular <strong>3006321901</strong>. También están CF-1043 (3002198844) y CF-1044 (3157701208).</p>
+        </aside>
+
+        <form id="form-consulta" style="margin-top:1.2rem" novalidate>
+          <div class="campo">
+            <label for="codigo">Código de caso</label>
+            <input id="codigo" name="codigo" type="text" required placeholder="CF-1042" autocomplete="off">
+            <p class="error" role="alert"></p>
+          </div>
+          <div class="campo">
+            <label for="tel-consulta">Celular del caso</label>
+            <input id="tel-consulta" name="tel-consulta" type="tel" inputmode="numeric" required data-regla="celular">
+            <p class="error" role="alert"></p>
+          </div>
+          <button class="boton oscuro" type="submit">Consultar</button>
+        </form>
+
+        <div id="resultado-consulta" class="oculto" style="margin-top:1.2rem"></div>
+      </section>
+
+      <section aria-labelledby="titulo-taller">
+        <h2 id="titulo-taller">Tablero interno</h2>
+        <p>Esta parte es para el equipo: cambia estados y deja una nota. En un proyecto con servidor iría con usuario. Aquí la clave de demostración es <strong>fix26</strong>.</p>
+
+        <div id="acceso-taller">
+          <form id="form-taller" novalidate>
+            <div class="campo">
+              <label for="clave-taller">Clave del equipo</label>
+              <input id="clave-taller" name="clave" type="password" required>
+              <p class="error" id="error-clave" role="alert"></p>
+            </div>
+            <button class="boton oscuro" type="submit">Entrar</button>
+          </form>
+        </div>
+
+        <div id="panel-taller" class="oculto">
+          <p>
+            <button type="button" id="cerrar-taller" class="boton claro">Cerrar tablero</button>
+          </p>
+          <div class="filtros" role="group" aria-label="Filtrar por estado">
+            <button type="button" class="activo" data-filtro="todas">Todas</button>
+            <button type="button" data-filtro="Recibida">Recibida</button>
+            <button type="button" data-filtro="En análisis">Análisis</button>
+            <button type="button" data-filtro="En ejecución">Ejecución</button>
+            <button type="button" data-filtro="Esperando cliente">Cliente</button>
+            <button type="button" data-filtro="Lista para cierre">Lista</button>
+          </div>
+          <div id="tablero" class="tablero"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="sitio-pie">
+    <div class="envoltorio pie-grid">
+      <div>
+        <strong>Computer Fix</strong>
+        <p>Consultoría TI para empresas.</p>
+      </div>
+      <div>
+        <strong>Contacto</strong>
+        <address>
+          Cra. 15 # 78-40, local 2<br>
+          Bogotá<br>
+          <a href="tel:+573006321934">300 632 1934</a><br>
+          <a href="mailto:computerfix.med@gmail.com">computerfix.med@gmail.com</a>
+        </address>
+      </div>
+      <div>
+        <strong>Sitio</strong>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="solicitar.html">Solicitar</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="envoltorio copy">
+      <p>© <span id="anio">2026</span> Computer Fix. Proyecto académico de Desarrollo Web.</p>
+    </div>
+  </footer>
+
+  <script src="js/taller.js"></script>
+  <script src="js/validacion.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
